@@ -1,0 +1,31 @@
+table{
+  @apply table-auto w-full text-left border-collapse border border-gray-300;
+  thead {
+    @apply bg-blue-950 text-white;
+    th{
+      @apply px-4 py-2;
+    }
+  }
+  tbody{
+    tr{
+      @apply odd:bg-white even:bg-gray-100;
+      td{
+        @apply px-4 py-2;
+        &.action{
+          @apply gap-2 flex;
+
+          button{
+            @apply p-2 rounded-md;
+            &.edit{
+              @apply bg-blue-950 text-white;
+            }
+            &.delete{
+              @apply bg-red-500 text-white;
+            }
+          }
+
+        }
+      }
+    }
+  }
+}

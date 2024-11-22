@@ -1,0 +1,29 @@
+.form {
+  &-content{
+    &--group{
+      @apply lg:flex lg:gap-2;
+    }
+
+  }
+  .form-field {
+
+    &--middle{
+      @apply  block mb-5 lg:w-1/2 w-full;
+    }
+    &--full{
+      @apply block mb-5 w-full;
+    }
+  }
+  input{
+    @apply border border-gray-300 rounded-md p-3 text-sm text-gray-700 placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+  }
+  label{
+    @apply text-sm font-medium text-blue-950;
+  }
+  button[type="submit"]{
+    @apply bg-blue-950 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded shadow hover:shadow-lg transition duration-200;
+  }
+  .error-input-form{
+    @apply text-red-400;
+  }
+}

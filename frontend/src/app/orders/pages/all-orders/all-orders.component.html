@@ -1,0 +1,34 @@
+<main>
+  <app-header [title]="title"/>
+  <div class="container m-auto">
+    <div class="mt-10 p-2 overflow-x-auto">
+      <table class="table-auto w-full border-collapse">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Price</th>
+            <th>Quantity</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let order of orders">
+            <td>{{order.id}}</td>
+            <td>{{order.email}}</td>
+            <td>{{order.firstName}}</td>
+            <td>{{order.lastName}}</td>
+            <td>{{order.price}}</td>
+            <td>{{order.quantity}}</td>
+            <td class="action">
+              <button class="edit" (click)="editOrder(order.id)">Edit</button>
+              <button class="delete" (click)="deleteOrder(order.id)">Delete</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</main>

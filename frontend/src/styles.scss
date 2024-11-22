@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+main {
+  @apply bg-blue-50 min-h-screen;
+}
+.title {
+  @apply text-3xl font-bold text-blue-900;
+}
+.button-apply {
+  @apply bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded shadow hover:shadow-lg transition duration-200
+}
